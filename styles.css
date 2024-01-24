@@ -139,12 +139,21 @@ footer {
     display: grid;
     grid-template-columns: 3fr 4fr;
     grid-template-rows: auto;
+    align-items: center;
     text-align: left;
     gap: 10px;
 
-    background-color: blue;
+    background-color: #2C8A83;
 
-    & div {
-        background-color: rgb(90, 90, 245);
+    & .logo img {
+        padding-left: 48px;
+        width: 32px;
+        height: auto;
+    }
+
+    & .copyright {
+        font-family: ABeeZee;
+        font-size: 24px;
+        color: white;
     }
 }
