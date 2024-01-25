@@ -6,6 +6,10 @@ header {
     text-align: center;
 }
 
+main {
+    position: relative;
+}
+
 header img {
     width: 63px;
     height: 127px;
@@ -40,7 +44,7 @@ header img {
 nav {
     height: 88px;
 
-    background: #2C8A83;
+    background: rgb(44, 138, 131);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 40px;
 }
@@ -66,7 +70,7 @@ nav .link-divider {
     width: 2px;
     height: 40px;
     border-radius: 20px;
-    background: #D9D9D9;
+    background: rgb(217, 217, 217);
 }
 
 .hero-space {
@@ -132,6 +136,32 @@ nav .link-divider {
     }
 }
 
+#main-azure-ellipse {
+    position: absolute;
+    z-index: -100;
+    left: -5%;
+    bottom: 0;
+    height: 72vh;
+    width: 41vw;
+    border-radius: 92%;
+    background-color: rgba(0, 131, 204, 0.5);
+    filter: blur(350px);
+    
+}
+
+#main-green-ellipse {
+    position: absolute;
+    z-index: -100;
+    left: 67%;
+    bottom: 16vh;
+    height: 56vh;
+    width: 41vw;
+    border-radius: 77%;
+    background-color: rgba(2, 99, 53, 0.86);
+    filter: blur(300px);
+    
+}
+
 footer {
     margin-bottom: -88px;
     height: 88px;
@@ -143,7 +173,7 @@ footer {
     text-align: left;
     gap: 10px;
 
-    background-color: #2C8A83;
+    background-color: rgb(44, 138, 131);
 
     & .logo img {
         padding-left: 48px;
