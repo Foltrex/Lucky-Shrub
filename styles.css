@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Jura&display=swap');
+
+:root {
+    --green: rgb(44, 138, 131);
+    --light-grey: rgb(217, 217, 217);
+}
+
 * {
     margin: 0;
 }
@@ -45,7 +52,7 @@ header img {
 nav {
     height: 88px;
 
-    background: rgb(44, 138, 131);
+    background: var(--green);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 40px;
 }
@@ -75,17 +82,17 @@ nav {
 .hamburger .line::before{
     top: 5px;
 }
+
 .hamburger .line::after{
     top: -5px;
 }
 
-.hamburger input[type="checkbox"] {
+.hamburger > input[type="checkbox"] {
     display: none;
 }
 
-.hamburger input:checked ~  {
-    height: max-content;
-
+.hamburger input:checked + ul  {
+    background-color: aqua;
 }
 
 nav ul {
@@ -117,7 +124,7 @@ nav .link-divider {
 }
 
 @media (min-width: 900px) {
-    nav .hamburger {
+    .hamburger .line {
         display: none;
     }
 
@@ -133,7 +140,7 @@ nav .link-divider {
         width: 2px;
         height: 40px;
         border-radius: 20px;
-        background: rgb(217, 217, 217);
+        background: var(--light-grey);
     }
     
 }
@@ -280,7 +287,7 @@ footer {
     text-align: left;
     gap: 10px;
 
-    background-color: rgb(44, 138, 131);
+    background-color: var(--green);
 
     & .logo img {
         padding-left: 48px;
