@@ -64,7 +64,6 @@ nav {
     top: 42px;
     right: 24px;
     cursor: pointer;
-    /* float: right; */
 }
 
 .hamb-line {
@@ -147,10 +146,6 @@ nav a {
 }
 
 @media (max-width: 900px) {
-    nav {
-        position: relative;
-    }
-
     nav ul {
         position: absolute;
         z-index: 200;
