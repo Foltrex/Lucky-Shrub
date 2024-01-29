@@ -55,44 +55,71 @@ nav {
     background: var(--green);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 40px;
+
+    transition: all 0.25s ease-in-out;
 }
 
-.hamburger .line {
+.hamb{
+    position: absolute;
+    top: 42px;
+    right: 24px;
     cursor: pointer;
     float: right;
+}
+
+.hamb-line {
     display: block;
-    margin: 42px 24px auto auto;
     height: 2px;
     position: relative;
     width: 24px;
     background-color: white;
 }
 
-.hamburger .line::before,
-.hamburger .line::after {
+.hamb-line::before,
+.hamb-line::after {
     background-color: white;
     content: '';
     display: white;
     height: 100%;
     position: absolute;
-    transition: all 0.2s ease-out;
+    transition: all 0.25s ease-out;
     width: 100%;
 }
 
-.hamburger .line::before{
+.hamb-line::before{
     top: 5px;
 }
 
-.hamburger .line::after{
+.hamb-line::after{
     top: -5px;
 }
 
-.hamburger > input[type="checkbox"] {
+.side-menu {
     display: none;
 }
 
-.hamburger input:checked + ul  {
-    background-color: aqua;
+.side-menu:checked {
+    & ~ nav {
+        height: 50vh;
+
+        & ul {
+            opacity: 1;
+        }
+    }
+
+    & ~ nav .hamb .hamb-line {
+        background: transparent;
+
+        &::before {
+            transform: rotate(-45deg);
+            top:0;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+            top:0;
+        }
+    }
 }
 
 nav ul {
@@ -119,12 +146,28 @@ nav a {
     }
 }
 
+@media (max-width: 900px) {
+    nav ul {
+        position: absolute;
+        z-index: 200;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.1s ease-in;
+    }
+
+    nav a {
+        font-size: 24px
+    }
+}
+
 nav .link-divider {
     display: none;
 }
 
 @media (min-width: 900px) {
-    .hamburger .line {
+    .hamb {
         display: none;
     }
 
