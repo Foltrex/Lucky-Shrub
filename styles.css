@@ -147,6 +147,10 @@ nav a {
 }
 
 @media (max-width: 900px) {
+    nav {
+        position: relative;
+    }
+    
     nav ul {
         position: absolute;
         z-index: 200;
